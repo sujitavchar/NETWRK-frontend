@@ -1,0 +1,239 @@
+:root {
+  --deep-navy: #13293D;
+  --blue-1: #006494;
+  --blue-2: #247BA0;
+  --blue-3: #1B98E0;
+  --light-bg: #E8F1F2;
+  --white: #ffffff;
+  --dark-text: #13293D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.netwrk-landing-container {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Arial', sans-serif;
+  color: var(--dark-text);
+}
+
+/* Navbar */
+.netwrk-navbar {
+  background-color: var(--white);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.netwrk-logo-container .netwrk-logo {
+  height: 40px;
+  max-width: 160px;
+  object-fit: contain;
+}
+
+.netwrk-auth-buttons button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.netwrk-login-btn,
+.netwrk-register-btn {
+  background-color: var(--deep-navy);
+  color: var(--white);
+}
+
+.netwrk-login-btn:hover,
+.netwrk-register-btn:hover {
+  background-color: var(--blue-1);
+}
+
+.netwrk-auth-buttons a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Hero Section */
+.netwrk-hero-section {
+  background-color: var(--deep-navy);
+  padding: 120px 60px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+}
+
+.netwrk-hero-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.netwrk-hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.netwrk-hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.netwrk-hero-cta button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.netwrk-primary-btn {
+  background-color: var(--blue-3);
+  color: var(--white);
+}
+
+.netwrk-primary-btn:hover {
+  background-color: var(--blue-2);
+  transform: scale(1.05);
+}
+
+.netwrk-secondary-btn {
+  background-color: var(--white);
+  color: var(--dark-text);
+  border: 2px solid var(--white);
+}
+
+.netwrk-secondary-btn:hover {
+  transform: scale(1.05);
+}
+
+.netwrk-hero-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: right;
+}
+
+.netwrk-hero-image img {
+  max-width: 320px;
+  border-radius: 50%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+}
+
+/* Features Section */
+.netwrk-features-section {
+  background-color: var(--white);
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.netwrk-features-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--dark-text);
+}
+
+.netwrk-feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.netwrk-feature-card {
+  background-color: var(--light-bg);
+  width: 280px;
+  margin: 15px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.netwrk-feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.netwrk-feature-card h3 {
+  margin-bottom: 10px;
+  color: var(--deep-navy);
+}
+
+/* Footer */
+.netwrk-footer {
+  background-color: var(--deep-navy);
+  color: var(--white);
+  padding: 60px 20px;
+}
+
+.netwrk-footer-logo img {
+  height: 35px;
+  margin-bottom: 10px;
+}
+
+.netwrk-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.netwrk-footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.netwrk-footer-column a {
+  color: var(--white);
+  margin: 5px 0;
+  display: block;
+  text-decoration: none;
+}
+
+.netwrk-footer-column a:hover {
+  color: var(--blue-3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .netwrk-navbar,
+  .netwrk-hero-section,
+  .netwrk-footer-content,
+  .netwrk-feature-cards {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .netwrk-hero-image {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .netwrk-hero-image img {
+    max-width: 240px;
+    border-radius: 50%;
+  }
+
+  .netwrk-logo {
+    height: 32px;
+    max-width: 140px;
+  }
+}
